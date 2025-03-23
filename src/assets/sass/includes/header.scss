@@ -1,0 +1,104 @@
+@use './variables' as *;
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(30, 60, 90, 0.1);
+
+  .logo {
+    padding: 10px 0;
+    img {
+      width: 90px;
+    }
+  }
+}
+.header-container {
+  display: block;
+  float: left;
+  width: 100%;
+  background-color: $header-background-color;
+
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+
+    .side-bars {
+      width: auto;
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 30px;
+        li {
+          &.toogle-menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 10px;
+          }
+
+          .alias {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #2270ad;
+            span {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #fff;
+              text-align: center;
+              /* v-text/body-1 */
+              font-family: 'Roboto';
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 24px; /* 150% */
+            }
+          }
+
+          .v-btn {
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 10px;
+            text-decoration: none;
+            background-color: #e6223d;
+            box-shadow: unset;
+            &:hover,
+            &:active {
+              background-color: #e6223d;
+            }
+          }
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 10px;
+            text-decoration: none;
+            span {
+              position: relative;
+              padding: 2px 0;
+              @include efects-underline(#fff);
+              color: #fff;
+
+              font-family: 'Poppins';
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
